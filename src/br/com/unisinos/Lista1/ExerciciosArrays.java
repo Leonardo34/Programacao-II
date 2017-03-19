@@ -25,6 +25,7 @@ public class ExerciciosArrays {
 		//exerciciosArray.imprimeNumerosRecursivo(10);
 		//System.out.println(exerciciosArray.calculaSomaCubos(4));
 		System.out.println(exerciciosArray.maiorValorArray(array));
+			
 	}
 
 	public void imprimeArray(int[][] m) {

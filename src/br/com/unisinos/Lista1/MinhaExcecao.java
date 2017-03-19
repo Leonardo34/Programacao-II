@@ -11,4 +11,5 @@ public class MinhaExcecao extends Exception {
 	public String getMessage() {
 		return msg;
 	}
+	
 }
