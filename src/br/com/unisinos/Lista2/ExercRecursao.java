@@ -12,6 +12,8 @@ public class ExercRecursao {
 		System.out.println(calculaSoma1aN(5));
 		int[] array = { 1, 2, 100, 4, 5, 50 };
 		System.out.println(somaVetor(array));
+		System.out.println(contains("Leonardo", 'o'));
+		System.out.println(contains("Leonardo", 't'));
 	}
 	
 	public static int somaVetor(int[] array) {
@@ -19,9 +21,23 @@ public class ExercRecursao {
 	}
 	
 	private static int somaVetorRecursivo(int[] array, int pos, int soma) {
-		if (pos >= array.length) {
+		if (pos == array.length) {
 			return soma;
 		}
 		return somaVetorRecursivo(array, pos + 1, soma + array[pos]);
+	}
+	
+	public static boolean contains(String word, char c) {
+		return containsRec(word, c, 0);
+	}
+	
+	private static boolean containsRec(String word, char c, int index) {
+		if (index == word.length()) {
+			return false;
+		}
+		if (word.charAt(index) == c) {
+			return true;
+		}
+		return containsRec(word, c, ++index);
 	}
 }
